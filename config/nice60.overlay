@@ -24,18 +24,6 @@
     status = "disabled"; 
 };
 
-/ {
-    backlight: backlight {
-        compatible = "gpio-backlight";
-        gpios = <&gpio1 9 GPIO_ACTIVE_HIGH>;
-        default-state = "on";
-    };
-
-    chosen {
-        zmk,backlight = &backlight;
-    };
-};
-
 &vbatt {
     io-channels = <&adc 0>;
 };
