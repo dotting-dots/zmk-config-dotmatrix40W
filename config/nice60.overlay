@@ -40,6 +40,14 @@
          regulator-boot-on;
          regulator-always-on;
     };
+    
+    extra_power_2: extra_power_2 {
+         compatible = "regulator-fixed";
+         regulator-name = "extra_power_2";
+         enable-gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
+         regulator-boot-on;
+         regulator-always-on;
+    };
 };
 
 &vbatt {
