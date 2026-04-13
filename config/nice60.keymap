@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/rgb.h>   // RGB lighting control
 #include <dt-bindings/zmk/bt.h>    // Bluetooth management
 #include <dt-bindings/zmk/backlight.h> // Backlight control
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30 // Increase scroll speed for encoder
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10 // Increase scroll speed for encoder
 #include <dt-bindings/zmk/pointing.h> // Mouse emulation
 
 / {
