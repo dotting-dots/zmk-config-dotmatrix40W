@@ -76,10 +76,8 @@
     };
 
     vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
+        compatible = "zmk,non-lipo-battery";
         io-channels = <&adc 0>;
-        output-ohms = <135>;
-        full-ohms = <420>;
     };
 
     backlight: pwmleds {
