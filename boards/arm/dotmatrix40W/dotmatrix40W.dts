@@ -92,7 +92,8 @@
          regulator-name = "extra_power";
          enable-gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
          regulator-boot-on;
-         regulator-always-on;
+         /* regulator-always-on is intentionally omitted to allow */
+         /* the regulator to be disabled during deep sleep.       */
     };
 
     encoder_left: encoder_left {
