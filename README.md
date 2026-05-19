@@ -1,4 +1,4 @@
-# dotmatrix40Wireless - ZMK Configuration
+# dotmatrix40W - ZMK Configuration
 
 ワイヤレス40%オーソリニアキーボード「**dotmatrix40Wireless** (略称: **dotmatrix40W**)」用のZMKファームウェアリポジトリです。
 
