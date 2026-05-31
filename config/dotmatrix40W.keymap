@@ -19,7 +19,7 @@
 
 / {
     behaviors {
-        scroll_encoder: scroll_encoder {
+        encoder_scroll_v: encoder_scroll_v {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN_FAST>, <&msc SCRL_UP_FAST>;
@@ -27,7 +27,7 @@
             tap-ms = <50>;
         };
 
-        scroll_encoder_h: scroll_encoder_h {
+        encoder_scroll_h: encoder_scroll_h {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT_FAST>, <&msc SCRL_LEFT_FAST>;
@@ -35,10 +35,40 @@
             tap-ms = <50>;
         };
 
-        bl_encoder: bl_encoder {
+        encoder_backlight: encoder_backlight {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&bl BL_INC>, <&bl BL_DEC>;
+        };
+
+        encoder_arrow_v: encoder_arrow_v {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp DOWN>, <&kp UP>;
+        };
+
+        encoder_arrow_h: encoder_arrow_h {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LEFT>;
+        };
+
+        encoder_volume: encoder_volume {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+        };
+
+        encoder_undo_win: encoder_undo_win {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(Y)>, <&kp LC(Z)>;
+        };
+
+        encoder_undo_mac: encoder_undo_mac {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LG(LS(Z))>, <&kp LG(Z)>;
         };
     };
 
@@ -53,7 +83,7 @@
 &mo 1       &kp LCTRL  &kp LALT  &kp LANG2  &kp SPACE                &kp RET  &kp LANG1  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&encoder_scroll_v>;
         };
 
         layer_1 {
@@ -64,7 +94,7 @@
 &trans   &kp F1   &kp F2   &kp F3   &mo 2                      &kp DEL   &kp KP_DIVIDE    &kp N0  &kp KP_DOT  &kp KP_EQUAL
             >;
 
-            sensor-bindings = <&scroll_encoder_h>;
+            sensor-bindings = <&encoder_scroll_h>;
         };
 
         layer_2 {
@@ -75,7 +105,7 @@
 &none  &none  &none  &none  &none                &none  &none  &none  &none  &none
             >;
 
-            sensor-bindings = <&bl_encoder>;
+            sensor-bindings = <&encoder_backlight>;
         };
 
         layer_3 {
