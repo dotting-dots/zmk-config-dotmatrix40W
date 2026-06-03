@@ -140,7 +140,7 @@
         mo0: mo0 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp LS(N9)>;
+            bindings = <&kp N0>, <&none>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
